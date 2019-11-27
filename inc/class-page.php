@@ -10,6 +10,7 @@ class Page {
     $html .= $this->getDocType();
     $html .= $this->getHtmlOpen();
     $html .= $this->getHead();
+    $html .= $this->getTopHeader();
     
     return $html
   }//End getHeader
@@ -55,6 +56,14 @@ class Page {
     
     return $head;    
   }//End getHead
+  
+  protected function getTopHeader() {
+    $htmlheader = "";
+    $htmlheader .= file_get_contents("template/page-topheader.php");
+    $htmlheader .= "\n";
+    
+    return $htmlheader;
+  }
 }
 
 ?>
