@@ -34,7 +34,8 @@ class Page {
   
   protected function getHead() {
     $head = "";
-    $head .= file_get_contents("template/page-head.php");
+    $head .= file_get_contents("template/page-meta.php");
+    $head .= "\n";
     
     if ($this->titleExtra != "") {
       $title = $this->titleExtra . "|" . $this->title;
@@ -44,6 +45,10 @@ class Page {
     }
     
     $head .= "<title>" . $title . "</title>\n";
+    
+    $head .= file_get_contents("template/page-links.php");
+    $head .= "\n";
+    
     $head .= "</head>";
     $head .= "\n";
     
