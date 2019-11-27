@@ -13,6 +13,15 @@ class Page {
     
     return $html
   }//End getHeader
+  
+  protected function getDocType($doctype = "html5") {
+    if ($doctype == "html5") {
+      $dtd = "<!doctype html>";
+      $dtd .= "\n";
+    }
+    
+    return $dtd;
+  }
 }
 
 ?>
