@@ -116,14 +116,12 @@ header .header img {
 header nav {
   margin-right: -15px;
   margin-left: -15px;
-  background-color: #4d80e4;
-  height: 0;
-  transition: height 0.5s ease;
+  background-color: #4d80e4;  
+  display: none;
 }
 
-header nav.active {
-  height: 162px;
-  transition: height 0.5s ease;
+header nav.active {  
+  display: block;
 }
 
 header nav ul {
