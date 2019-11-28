@@ -36,7 +36,7 @@ class Page {
   protected function getHead() {
     $head = "";
     $head .= "<head>\n";
-    $head .= file_get_contents("template/page-topmeta.php");
+    $head .= file_get_contents("template/topmeta.html");
     $head .= "\n";
     
     if ($this->titleExtra != "") {
@@ -48,7 +48,7 @@ class Page {
     
     $head .= "<title>" . $title . "</title>\n";
     
-    $head .= file_get_contents("template/page-toplinks.php");
+    $head .= file_get_contents("template/toplinks.html");
     $head .= "\n";
     
     $head .= "</head>";
@@ -57,12 +57,45 @@ class Page {
     return $head;    
   }//End getHead
   
+  protected function getBodyOpen() {
+    $body = "";
+    $body .= "<body>";
+    $body .= "\n";
+    
+    return $body;
+  }
+  
   protected function getTopHeader() {
     $htmlheader = "";
-    $htmlheader .= file_get_contents("template/page-topheader.php");
+    $htmlheader .= file_get_contents("template/topheader.html");
     $htmlheader .= "\n";
     
     return $htmlheader;
+  }
+  
+  protected function getBodyCont($page) {
+    $html = "";
+    $html .= file_get_contents("page/{$page}.html");
+    $html .= "\n";
+    
+    return $html;
+  }
+  
+  protected function getBottomScripts() {
+    $html = "";
+    $html .= file_get_contents("template/bottom.html");
+    $html .= "\n";
+    
+    return $html;
+  }
+  
+  protected function getBodyClose() {
+    $html = "";
+    $html .= "</body>\n";
+    $html .= "</html>";
+    $html .= "\n";
+    
+    return $html;
   }
 }
 
