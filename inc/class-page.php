@@ -54,7 +54,9 @@ class Page {
   protected function getHead() {
     $head = "";
     $head .= "<head>\n";
-    $head .= file_get_contents("template/topmeta.html");
+    if (file_exists("template/topmeta.html")) {
+      $head .= file_get_contents("template/topmeta.html");  
+    }
     $head .= "\n";
     
     if ($this->titleExtra != "") {
@@ -66,7 +68,9 @@ class Page {
     
     $head .= "<title>" . $title . "</title>\n";
     
-    $head .= file_get_contents("template/toplinks.html");
+    if (file_exists("template/toplinks.html")) {
+      $head .= file_get_contents("template/toplinks.html");  
+    }
     $head .= "\n";
     
     $head .= "</head>";
@@ -76,24 +80,28 @@ class Page {
   }//End getHead
   
   protected function getBodyOpen() {
-    $body = "";
-    $body .= "<body>";
-    $body .= "\n";
+    $html = "";
+    $html .= "<body>";
+    $html .= "\n";
     
-    return $body;
+    return $html;
   }
   
   protected function getTopHeader() {
-    $htmlheader = "";
-    $htmlheader .= file_get_contents("template/topheader.html");
-    $htmlheader .= "\n";
+    $html = "";
+    if (file_exists("template/topheader.html")) {
+      $html .= file_get_contents("template/topheader.html");  
+    }
+    $html .= "\n";
     
-    return $htmlheader;
+    return $html;
   }
   
   protected function getBodyCont($page) {
     $html = "";
-    $html .= file_get_contents("page/{$page}.html");
+    if (file_exists("page/{$page}.html") {
+      $html .= file_get_contents("page/{$page}.html");  
+    }
     $html .= "\n";
     
     return $html;
@@ -101,7 +109,9 @@ class Page {
   
   protected function getFooter() {
     $html = "";
-    $html .= file_get_contents("template/footer.html");
+    if (file_exists("template/footer.html")) {
+      $html .= file_get_contents("template/footer.html");  
+    }
     $html .= "\n";
     
     return $html;
@@ -109,7 +119,9 @@ class Page {
   
   protected function getBottomScripts() {
     $html = "";
-    $html .= file_get_contents("template/bottomscripts.html");
+    if (file_exists("template/bottomscripts.html")) {
+      $html .= file_get_contents("template/bottomscripts.html");  
+    }
     $html .= "\n";
     
     return $html;
