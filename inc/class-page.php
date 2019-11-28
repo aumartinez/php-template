@@ -5,6 +5,7 @@ class Page {
   public $title = "The web site";
   public $titleExtra = "";
   
+  //Page constructors  
   public function getHtmlHead() {
     $html = "";
     $html .= $this->getDocType();
@@ -31,6 +32,7 @@ class Page {
     return $html;
   }
   
+  //Page templates
   protected function getDocType($doctype = "html5") {
     if ($doctype == "html5") {
       $dtd = "<!doctype html>";
