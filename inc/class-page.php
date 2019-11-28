@@ -97,6 +97,14 @@ class Page {
     return $html;
   }
   
+  protected function getFooter() {
+    $html = "";
+    $html .= file_get_contents("template/footer.html");
+    $html .= "\n";
+    
+    return $html;
+  }
+  
   protected function getBottomScripts() {
     $html = "";
     $html .= file_get_contents("template/bottomscripts.html");
