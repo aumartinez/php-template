@@ -31,6 +31,15 @@ footer {
   clear: both;
 }
 
+.row:before,
+.row:after,
+.row::before,
+.row::after {
+  content: "";
+  display: block;  
+  clear: both;
+}
+
 div[class*="col-"] {
   padding-left: 15px;
   padding-right: 15px;
@@ -141,6 +150,14 @@ header nav ul li a {
 header nav ul li a:hover {
   background-color: #2e279d;
 }
+
+section.body {
+  padding: 45px 0;
+}
+
+section > div {
+  padding: 15px 0;
+}
   
 @media (min-width: 768px) {
   .container {
@@ -155,5 +172,9 @@ header nav ul li a:hover {
   
   .visible-xs {
     display: none;
+  }
+  
+  header nav {
+    display: block;
   }
 }
