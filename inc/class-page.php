@@ -5,15 +5,31 @@ class Page {
   public $title = "The web site";
   public $titleExtra = "";
   
-  public function getHeader() {
+  public function getHtmlHead() {
     $html = "";
     $html .= $this->getDocType();
     $html .= $this->getHtmlOpen();
     $html .= $this->getHead();
-    $html .= $this->getTopHeader();
     
     return $html
   }//End getHeader
+  
+  public function getHtmlBody($page = "index") {
+    $html = "";
+    $html .= $this->getBodyOpen();
+    $html .= $this->getTopHeader();
+    $html .= $this->getBodyCont($page);
+    $html .= $this->getBottomScripts();
+    
+    return $html;    
+  }
+  
+  public function getHtmlClose() {
+    $html = "";
+    $html .= $this->getBodyClose();
+    
+    return $html;
+  }
   
   protected function getDocType($doctype = "html5") {
     if ($doctype == "html5") {
@@ -83,7 +99,7 @@ class Page {
   
   protected function getBottomScripts() {
     $html = "";
-    $html .= file_get_contents("template/bottom.html");
+    $html .= file_get_contents("template/bottomscripts.html");
     $html .= "\n";
     
     return $html;
