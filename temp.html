@@ -14,17 +14,23 @@
     <header class="bg-primary">
       <div class="container">
         <div class="row">
-          <div class="header logo">
-            <img src="img/logo.png">
-          </div>
+          <div class="col-1">
+            <div class="header logo">
+              <img src="img/logo.png">
+              
+              <button id="navbar-toggle" data-toggle="active" data-target="#navbar" type="button" class="toggle-btn bg-secondary visible-xs">
+                <span>+</span>
+              </button>
+            </div>
           
-          <nav>
-            <ul class="navbar">
-              <li><a href="index.php">Home</a></li>
-              <li><a href="about.php">About Us</a></li>
-              <li><a href="contact.php">Contact Us</a></li>
-            </ul>
-          </nav>
+            <nav id="navbar">
+              <ul class="nav-menu">
+                <li><a href="index.php">Home</a></li>
+                <li><a href="about.php">About Us</a></li>
+                <li><a href="contact.php">Contact Us</a></li>
+              </ul>
+            </nav>
+          </div>
         </div>
       </div>
     </header>
@@ -104,5 +110,7 @@
         </div>
       </div>
     </footer>
+    
+    <script type="text/javascript" src="js/main.js"></script>
   </body>
 </html>
