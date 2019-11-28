@@ -79,9 +79,9 @@ class Page {
     return $head;    
   }//End getHead
   
-  protected function getBodyOpen() {
+  protected function getBodyOpen($page = "index") {
     $html = "";
-    $html .= "<body>";
+    $html .= "<body id=\"{$page}\">";
     $html .= "\n";
     
     return $html;
