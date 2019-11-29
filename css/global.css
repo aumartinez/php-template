@@ -11,7 +11,7 @@
 body{
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.6;
   background-color: #dff6f0;
 }
 
@@ -76,6 +76,10 @@ h3 {
   margin-bottom: 15px;
 }
 
+p {
+  margin: 1em 0 1.3em;
+}
+
 /* Branding */
 
 .bg-primary {
@@ -108,6 +112,13 @@ a.color-tertiary,
 a.color-white,
 .color-white {
   color: #fff;
+}
+
+a.btn-primary,
+.btn-primary {
+  text-decoration: none;
+  color: #fff;
+  background-color: #46b3e6;
 }
 
 /* Header */
@@ -183,6 +194,14 @@ section div[class*="col-"] {
   padding-top: 15px;
   padding-bottom: 15px;  
 }
+
+/* Content */ 
+
+#index .bg-hero {
+  background-image: url("../img/hero-landing.png");
+  background-size: cover;
+  background-position: 35% 0;
+}
   
 @media (min-width: 768px) {
   .container {
@@ -201,5 +220,9 @@ section div[class*="col-"] {
   
   header nav {
     display: block;
+  }
+  
+  #index .bg-hero {
+    background-position: top center;
   }
 }
