@@ -61,7 +61,7 @@ class Page {
     $head .= "\n";
     
     if ($this->titleExtra != "") {
-      $title = $this->titleExtra . "|" . $this->title;
+      $title = $this->titleExtra . " | " . $this->title;
     }
     else {
       $title = $this->title;
