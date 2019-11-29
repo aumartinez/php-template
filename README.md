@@ -19,6 +19,10 @@ Pages are constructed with the <code>class-page.php</code> object.
 
 Since the call to the templated elements is static no PHP script can be included in them, the class Page should be changed to include files instead of getting the file content string.
 
+### Easter egg
+
+Added a "collapsing" function using JS, initially thought that it could be done with CSS only, but you need to hard setup the height to have the "transitioning" effect to work. Then JS is the best bet here.
+
 You may preview the result of this technique at:
 
 https://accedo-gps.000webhostapp.com/demo/php-template/
