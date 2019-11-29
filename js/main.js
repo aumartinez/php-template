@@ -17,11 +17,12 @@ function collapse(evt){
   let arr = elem.className.split(" ");
   let ind = arr.indexOf("active");
   
+  let max, min;
   let inc = 10;
   
   if (ind >= 0) {
-    let min = 0;
-    let max = elem.offsetHeight;
+    min = 0;
+    max = elem.offsetHeight;
     
     let collapsing = setInterval(function(){
       elem.style.height = min + "px";
@@ -35,7 +36,7 @@ function collapse(evt){
   }
   else {
     elem.style.display = "block";
-    let max = elem.offsetHeight;
+    max = elem.offsetHeight;
         
     let collapsing = setInterval(function(){
       elem.style.height = max + "px";
