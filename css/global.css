@@ -173,7 +173,7 @@ header .header img {
   width: 45px;
   height: 45px;
   float: right;
-  margin-top: 15px;
+  margin-top: 10px;
   border: none;
 }
 
@@ -260,7 +260,7 @@ footer .pre-bottom {
 }
 
 footer .bottom {
-  padding: 15px 0 30px;  
+  padding: 15px 0 40px;
 }
 
 footer nav ul {
