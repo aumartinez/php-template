@@ -144,8 +144,10 @@ a.btn-primary,
   font-size: 16px;
 }
 
+.btn-primary:hover,
 a.btn-primary:hover {
   background-color: #4d80e4;
+  cursor: pointer;
 }
 
 /* Header */

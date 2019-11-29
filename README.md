@@ -20,3 +20,4 @@ Since the call to the templated elements is static no PHP script can be included
 
 You may preview the result of this technique at:
 
+https://accedo-gps.000webhostapp.com/demo/php-template/
