@@ -6,7 +6,7 @@ An example of PHP templating techniques for static HTML
 
 Static HTML files are kept together in one single folder; not every element can be templated but from a view of most sites I've worked on we can keep the below templated elements:
 
-1. Top HTML meta scripts, calls to CSS files and JS scripts.
+1. Top HTML meta scripts, call to CSS files and JS scripts.
 2. Top header sections which includes:
     - Top header section with site branding (logo) and social links
     - Navigation items
