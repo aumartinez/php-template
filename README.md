@@ -7,8 +7,8 @@ Static HTML files are kept together in one single folder; not every element can 
 
 1. Top HTML meta scripts, calls to CSS files and JS scripts.
 2. Top header sections which includes:
-  - Top header section with site branding (logo) and social links
-  - Navigation items
+    - Top header section with site branding (logo) and social links
+    - Navigation items
 3. Page body content section
 4. Page footer content section
 
