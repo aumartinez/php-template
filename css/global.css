@@ -57,9 +57,18 @@ ul {
   display: block;
 }
 
+div[class*="col-"].col-center {
+  margin: auto;
+  float: none;
+}
+
 /* Helpers */
 
 .text-center-xs {
+  text-align: center;
+}
+
+.text-center {
   text-align: center;
 }
 
@@ -130,6 +139,9 @@ a.btn-primary,
   height: 45px;
   line-height: 45px;
   display: inline-block;
+  box-shadow: none;
+  border: 0;
+  font-size: 16px;
 }
 
 a.btn-primary:hover {
@@ -220,6 +232,18 @@ section div[class*="col-"] {
   background-position: 35% 0;
 }
 
+#about .bg-hero {
+  background-image: url("../img/hero-about.png");
+  background-size: cover;
+  background-position: 35% 0;
+}
+
+#contact .bg-hero {
+  background-image: url("../img/hero-contact.png");
+  background-size: cover;
+  background-position: 35% 0;
+}
+
 /* Footer */
 
 footer .pre-bottom {
@@ -255,6 +279,36 @@ footer nav ul li a {
 footer nav ul li a:hover {
   text-decoration: underline;
 }
+
+/* Form */
+
+form .form-group {
+  clear: both;
+  float: none;
+  padding: 15px 0;
+}
+
+.form-group textarea,
+.form-group input,
+.form-group label {
+  display: block;
+  width: 100%;  
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+}
+
+.form-group input {
+  height: 30px;
+}
+
+.form-group textarea {
+  height: 150px;
+  padding: 15px;
+}
   
 @media (min-width: 768px) {
   
@@ -272,6 +326,18 @@ footer nav ul li a:hover {
   
   .visible-xs {
     display: none;
+  }
+  
+  h1 {
+    font-size: 55px;
+  }
+  
+  h2 {
+    font-size: 42px;
+  }
+  
+  h3 {
+    font-size: 36px;
   }
   
   /* Helpers */
@@ -317,8 +383,12 @@ footer nav ul li a:hover {
     background-position: top center;
   }
   
-  .bg-hero h1 {
-    font-size: 55px;
+  #about .bg-hero {
+    background-position: top center;
+  }
+  
+  #contact .bg-hero {
+    background-position: top center;
   }
   
   section.content {
