@@ -177,6 +177,10 @@ header .header img {
   border: none;
 }
 
+.toggle-btn:hover {
+  cursor: pointer;
+}
+
 .toggle-btn span {
   font-size: 36px;
   color: #fff;
