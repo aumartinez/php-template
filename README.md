@@ -1,5 +1,6 @@
 # php-template
-An example of PHP templating techniques
+
+An example of PHP templating techniques for static HTML
 
 ## Creating the template
 
