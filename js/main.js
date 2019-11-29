@@ -23,6 +23,7 @@ function collapse(evt){
   if (ind >= 0) {
     min = 0;
     max = elem.offsetHeight;
+    elem.style.height = 0 + "px";
     
     let collapsing = setInterval(function(){
       elem.style.height = min + "px";

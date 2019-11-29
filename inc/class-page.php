@@ -12,14 +12,15 @@ class Page {
     $html .= $this->getHtmlOpen();
     $html .= $this->getHead();
     
-    return $html
+    return $html;
   }//End getHeader
   
-  public function getHtmlBody($page = "index") {
+  public function getHtmlBody($page) {
     $html = "";
-    $html .= $this->getBodyOpen();
+    $html .= $this->getBodyOpen($page);
     $html .= $this->getTopHeader();
     $html .= $this->getBodyCont($page);
+    $html .= $this->getFooter();
     $html .= $this->getBottomScripts();
     
     return $html;    
@@ -63,7 +64,7 @@ class Page {
       $title = $this->titleExtra . "|" . $this->title;
     }
     else {
-      $tile = $this->title;
+      $title = $this->title;
     }
     
     $head .= "<title>" . $title . "</title>\n";
@@ -99,7 +100,7 @@ class Page {
   
   protected function getBodyCont($page) {
     $html = "";
-    if (file_exists("page/{$page}.html") {
+    if (file_exists("page/{$page}.html")) {
       $html .= file_get_contents("page/{$page}.html");  
     }
     $html .= "\n";

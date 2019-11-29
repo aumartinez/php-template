@@ -51,9 +51,16 @@ ul {
   padding-left: 40px;  
 }
 
+.col-2,
 .col-1 {
   width: 100%;
   display: block;
+}
+
+/* Helpers */
+
+.text-center-xs {
+  text-align: center;
 }
 
 /* Titles */
@@ -119,6 +126,14 @@ a.btn-primary,
   text-decoration: none;
   color: #fff;
   background-color: #46b3e6;
+  padding: 0 15px;
+  height: 45px;
+  line-height: 45px;
+  display: inline-block;
+}
+
+a.btn-primary:hover {
+  background-color: #4d80e4;
 }
 
 /* Header */
@@ -131,6 +146,8 @@ header {
 header .header {  
   padding-top: 15px;
   padding-bottom: 15px;
+  height: 100px;
+  box-sizing: border-box;
 }
 
 header .header img {
@@ -197,13 +214,52 @@ section div[class*="col-"] {
 
 /* Content */ 
 
-#index .bg-hero {
+#home .bg-hero {
   background-image: url("../img/hero-landing.png");
   background-size: cover;
   background-position: 35% 0;
 }
+
+/* Footer */
+
+footer .pre-bottom {
+  padding: 45px 0;
+  background-image: url("../img/bg-footer.png");
+  background-size: cover;
+  background-position: top right; 
+}
+
+.pre-bottom h2 {
+  margin-bottom: 25px;
+}
+
+footer .bottom {
+  padding: 15px 0 30px;  
+}
+
+footer nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;  
+  text-align: center;
+}
+
+footer nav ul li {
+  display: inline-block;
+}
+
+footer nav ul li a {
+  text-decoration: none;
+}
+
+footer nav ul li a:hover {
+  text-decoration: underline;
+}
   
 @media (min-width: 768px) {
+  
+  /* Global */
+  
   .container {
     max-width: 1170px;    
     margin: 0 auto;
@@ -218,11 +274,65 @@ section div[class*="col-"] {
     display: none;
   }
   
+  /* Helpers */
+  
+  .text-center-xs {
+    text-align: initial;
+  }  
+  
+  /* Header */
+  
+  header .header {
+    display: inline-block;
+  }
+  
   header nav {
     display: block;
+    float: right;
+    background-color: transparent;
+    margin: 0;
   }
+  
+  header nav ul {
+    display: table;
+    padding: 0;
+  }
+  
+  header nav ul li {
+    display: table-cell;
+    vertical-align: middle;
+    height: 100px;
+  }
+  
+  header nav ul li a {
+    padding: 0 15px;
+    height: 45px;
+    box-sizing: border-box;
+    line-height: 45px;
+  }
+  
+  /* Content */
   
   #index .bg-hero {
     background-position: top center;
+  }
+  
+  .bg-hero h1 {
+    font-size: 55px;
+  }
+  
+  section.content {
+    padding: 45px 0;
+  }
+  
+  /* Footer */
+  
+  footer nav ul {
+    text-align: right;
+    margin: 1em 0 1.3em;
+  }
+  
+  footer nav ul li a {
+    padding: 0 5px;
   }
 }
