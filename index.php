@@ -2,7 +2,7 @@
 
 require_once("inc/class-page.php");
 
-$page = new Page();
+$page = new Page("home");
 $pageName = "home";
 
 $page->titleExtra = "Home";
